@@ -16,5 +16,4 @@ ALTER TABLE dbo.Summit2022
 
 -- save as migration script
 -- add undo
-ALTER TABLE dbo.Summit2022
- drop QuoteByURL
+ALTER TABLE dbo.Summit2022 DROP COLUMN QuoteByURL
