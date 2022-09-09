@@ -945,7 +945,7 @@ SELECT Products.ProductName AS TenMostExpensiveProducts, Products.UnitPrice
 FROM Products
 ORDER BY Products.UnitPrice DESC
 GO
-DROP TABLE Event 
+DROP TABLE IF EXISTS dbo.Event 
 CREATE TABLE dbo.Event (
 EventID INT IDENTITY(1,1) NOT NULL CONSTRAINT EventPK PRIMARY KEY,
 EventName VARCHAR(100),
@@ -974,7 +974,7 @@ CREATE TABLE dbo.SQLBits2022 (
  Quote VARCHAR(500)
 )
 GO
-USE [dlm_1_dev]
+--USE [dlm_1_dev]
 GO
 
 /****** Object:  Table [dbo].[CountryCodes]    Script Date: 8/23/2022 9:52:24 AM ******/
