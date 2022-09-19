@@ -8,10 +8,10 @@ Copyright 2022 Redgate Software
 USE [master]
 GO
 /****** Object:  Database [Westwind]    Script Date: 22/08/2022 20:39:10 ******/
-If not exists (select [name] from sys.databases where [name]='Westwind')
- CREATE DATABASE [Westwind]
+If not exists (select [name] from sys.databases where [name]='Westwind_1_Dev')
+ CREATE DATABASE [Westwind_1_Dev]
 GO
-USE [Westwind]
+USE [Westwind_1_Dev]
 GO
 /****** Object:  Table [dbo].[Customers]    Script Date: 22/08/2022 20:39:10 ******/
 SET ANSI_NULLS ON
@@ -939,13 +939,15 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
-create procedure [dbo].[Ten Most Expensive Products] AS
-SET ROWCOUNT 10
-SELECT Products.ProductName AS TenMostExpensiveProducts, Products.UnitPrice
+CREATE PROCEDURE [dbo].[Ten Most Expensive Products]
+AS
+SET ROWCOUNT 10;
+SELECT Products.ProductName AS TenMostExpensiveProducts,
+       Products.UnitPrice
 FROM Products
-ORDER BY Products.UnitPrice DESC
+ORDER BY Products.UnitPrice DESC;
 GO
-DROP TABLE Event 
+
 CREATE TABLE dbo.Event (
 EventID INT IDENTITY(1,1) NOT NULL CONSTRAINT EventPK PRIMARY KEY,
 EventName VARCHAR(100),
@@ -974,16 +976,6 @@ CREATE TABLE dbo.SQLBits2022 (
  Quote VARCHAR(500)
 )
 GO
-USE [dlm_1_dev]
-GO
-
-/****** Object:  Table [dbo].[CountryCodes]    Script Date: 8/23/2022 9:52:24 AM ******/
-SET ANSI_NULLS ON
-GO
-
-SET QUOTED_IDENTIFIER ON
-GO
-
 CREATE TABLE [dbo].[CountryCodes](
 	[CountryName] [nvarchar](255) NULL,
 	[CountryCode] [nvarchar](4) NOT NULL,
@@ -1253,3 +1245,4 @@ VALUES
 ( N'SOUTH AFRICA', N'ZA', NULL ), 
 ( N'ZAMBIA', N'ZM', NULL ), 
 ( N'ZIMBABWE', N'ZW', NULL )
+GO
