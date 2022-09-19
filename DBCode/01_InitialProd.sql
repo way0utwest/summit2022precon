@@ -947,7 +947,6 @@ SELECT Products.ProductName AS TenMostExpensiveProducts,
 FROM Products
 ORDER BY Products.UnitPrice DESC;
 GO
-
 CREATE TABLE dbo.Event (
 EventID INT IDENTITY(1,1) NOT NULL CONSTRAINT EventPK PRIMARY KEY,
 EventName VARCHAR(100),
@@ -1009,7 +1008,7 @@ VALUES
 ( N'AUSTRIA', N'AT', NULL ), 
 ( N'AUSTRALIA', N'AU', NULL ), 
 ( N'ARUBA', N'AW', NULL ), 
-( N'ÅLAND ISLANDS', N'AX', NULL ), 
+( N'ï¿½LAND ISLANDS', N'AX', NULL ), 
 ( N'AZERBAIJAN', N'AZ', NULL ), 
 ( N'BOSNIA AND HERZEGOVINA', N'BA', NULL ), 
 ( N'BARBADOS', N'BB', NULL ), 
@@ -1020,7 +1019,7 @@ VALUES
 ( N'BAHRAIN', N'BH', NULL ), 
 ( N'BURUNDI', N'BI', NULL ), 
 ( N'BENIN', N'BJ', NULL ), 
-( N'SAINT BARTHÉLEMY', N'BL', NULL ), 
+( N'SAINT BARTHï¿½LEMY', N'BL', NULL ), 
 ( N'BERMUDA', N'BM', NULL ), 
 ( N'BRUNEI DARUSSALAM', N'BN', NULL ), 
 ( N'BOLIVIA', N'BO', NULL ), 
@@ -1038,7 +1037,7 @@ VALUES
 ( N'CENTRAL AFRICAN REPUBLIC', N'CF', NULL ), 
 ( N'CONGO', N'CG', NULL ), 
 ( N'SWITZERLAND', N'CH', NULL ), 
-( N'CÔTE D''IVOIRE', N'CI', NULL ), 
+( N'Cï¿½TE D''IVOIRE', N'CI', NULL ), 
 ( N'COOK ISLANDS', N'CK', NULL ), 
 ( N'CHILE', N'CL', NULL ), 
 ( N'CAMEROON', N'CM', NULL ), 
@@ -1047,7 +1046,7 @@ VALUES
 ( N'COSTA RICA', N'CR', NULL ), 
 ( N'CUBA', N'CU', NULL ), 
 ( N'CAPE VERDE', N'CV', NULL ), 
-( N'CURAÇAO', N'CW', NULL ), 
+( N'CURAï¿½AO', N'CW', NULL ), 
 ( N'CHRISTMAS ISLAND', N'CX', NULL ), 
 ( N'CYPRUS', N'CY', NULL ), 
 ( N'CZECH REPUBLIC', N'CZ', NULL ), 
@@ -1183,7 +1182,7 @@ VALUES
 ( N'PALAU', N'PW', NULL ), 
 ( N'PARAGUAY', N'PY', NULL ), 
 ( N'QATAR', N'QA', NULL ), 
-( N'RÉUNION', N'RE', NULL ), 
+( N'Rï¿½UNION', N'RE', NULL ), 
 ( N'ROMANIA', N'RO', NULL ), 
 ( N'SERBIA', N'RS', NULL ), 
 ( N'RUSSIAN FEDERATION', N'RU', NULL ), 
