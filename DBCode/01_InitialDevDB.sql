@@ -7,11 +7,11 @@ Copyright 2022 Redgate Software
 */
 USE [master]
 GO
-/* Production */
-If not exists (select [name] from sys.databases where [name]='Westwind')
- CREATE DATABASE [Westwind]
+/****** Object:  Database [Westwind]    Script Date: 22/08/2022 20:39:10 ******/
+If not exists (select [name] from sys.databases where [name]='Westwind_1_Dev')
+ CREATE DATABASE [Westwind_1_Dev]
 GO
-USE [Westwind]
+USE [Westwind_1_Dev]
 GO
 /* Dev */
 If not exists (select [name] from sys.databases where [name]='Westwind_1_Dev')

@@ -789,10 +789,6 @@ ALTER TABLE [dbo].[Employees]  WITH NOCHECK ADD  CONSTRAINT [CK_Birthdate] CHECK
 GO
 ALTER TABLE [dbo].[Employees] CHECK CONSTRAINT [CK_Birthdate]
 GO
-ALTER TABLE [dbo].[Order Details]  WITH NOCHECK ADD  CONSTRAINT [CK_Discount] CHECK  (([Discount]>=(0) AND [Discount]<=(1)))
-GO
-ALTER TABLE [dbo].[Order Details] CHECK CONSTRAINT [CK_Discount]
-GO
 ALTER TABLE [dbo].[Order Details]  WITH NOCHECK ADD  CONSTRAINT [CK_Quantity] CHECK  (([Quantity]>(0)))
 GO
 ALTER TABLE [dbo].[Order Details] CHECK CONSTRAINT [CK_Quantity]
