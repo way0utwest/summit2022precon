@@ -15,3 +15,39 @@ CREATE TABLE dbo.Summit2022 (
 ;
 GO
 
+-- Let's test this:
+SELECT * FROM dbo.Summit2022
+GO
+
+-- add data, edit as needed to tests
+INSERT dbo.Summit2022
+(
+    QuoteBy,
+    Quote
+)
+VALUES
+(   'way0utwest', -- QuoteBy - varchar(50)
+    'It is wonderful to be back at a live Community Summit'  -- Quote - varchar(500)
+    )
+GO
+SELECT Summit2022ID,
+       QuoteBy,
+       Quote
+ FROM dbo.Summit2022
+GO
+
+
+-- deploy to prod
+-- somehow
+
+-- add new data in prod
+INSERT dbo.Summit2022
+(
+    QuoteBy,
+    Quote
+)
+VALUES
+(   'way0utwest', -- QuoteBy - varchar(50)
+    'It is really wonderful to be back at a live Community Summit'  -- Quote - varchar(500)
+    )
+GO
