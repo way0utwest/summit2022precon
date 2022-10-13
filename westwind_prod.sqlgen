@@ -3327,7 +3327,7 @@ Version:4.5.0.3977-->
               </element>
               <element>
                 <key type="string">MaxValue</key>
-                <value type="string">1</value>
+                <value type="string">0.4</value>
               </element>
               <element>
                 <key type="string">UseColumnOffset</key>
