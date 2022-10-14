@@ -8,8 +8,11 @@ Copyright 2022 Redgate Software
 USE [master]
 GO
 /****** Object:  Database [Westwind]    Script Date: 22/08/2022 20:39:10 ******/
-If not exists (select [name] from sys.databases where [name]='Westwind')
- CREATE DATABASE [Westwind]
+IF EXISTS (select [name] from sys.databases where [name]='Westwind')
+  ALTER DATABASE [Westwind] SET  SINGLE_USER WITH ROLLBACK IMMEDIATE
 GO
-USE [Westwind]
+DROP DATABASE IF EXISTS Westwind 
+GO
+IF not exists (select [name] from sys.databases where [name]='Westwind')
+ CREATE DATABASE [Westwind]
 GO
