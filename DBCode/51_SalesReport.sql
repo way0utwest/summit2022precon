@@ -17,11 +17,12 @@ BEGIN
    INNER JOIN dbo.Employees AS e ON e.EmployeeID = o.EmployeeID
    WHERE o.OrderDate > @StartDate 
    AND o.OrderDate < @EndDate
+   AND o.EmployeeID = @EmployeeID
    GROUP BY e.FirstName + ' ' + e.LastName, o.OrderID, o.OrderDate, c.CompanyName
 END
 
 GO
-EXEC SalesReport '2020/01/01', '2022/12/31', 189
+EXEC SalesReport '2022/01/01', '2022/12/31', 1
 
 -- Zero dollar sale
 SELECT * FROM dbo.[Order Details] AS od WHERE od.OrderID = 16821
@@ -33,7 +34,7 @@ SELECT * FROM dbo.[Order Details] AS od WHERE od.OrderID = 16821
 -- Find more problems
 
 -- Check in development
-SELECT * FROM dbo.[Order Details] AS od WHERE od.Discount > .4
+SELECT * FROM dbo.[Order Details] AS od WHERE od.Discount > .8
 -- no data
 
 

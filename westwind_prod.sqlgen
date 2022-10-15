@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <!--
-SQL Data Generator 4
 SQL Data Generator
-Version:4.4.6.3568-->
+RedGate.SQLDataGenerator.UI
+Version:4.5.0.3977-->
 <Project version="2" type="SDGProject">
   <DataSource version="4" type="LiveDatabaseSource">
     <ServerName>(local)</ServerName>
@@ -2844,7 +2844,7 @@ Version:4.4.6.3568-->
           <MaxBuckets>1000</MaxBuckets>
           <Seed>0</Seed>
           <MinRepeats>1</MinRepeats>
-          <MaxRepeats>10</MaxRepeats>
+          <MaxRepeats>128</MaxRepeats>
           <NullsAllowed>False</NullsAllowed>
           <NullProportion>0.01</NullProportion>
         </value>
@@ -2985,11 +2985,11 @@ Version:4.4.6.3568-->
               </element>
               <element>
                 <key type="string">MinValue</key>
-                <value type="string">629560512000000000</value>
+                <value type="string">637450560000000000</value>
               </element>
               <element>
                 <key type="string">MaxValue</key>
-                <value type="string">638353440000000000</value>
+                <value type="string">638038080000000000</value>
               </element>
               <element>
                 <key type="string">UseColumnOffset</key>
