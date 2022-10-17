@@ -1,3 +1,4 @@
+-- Procedure already in Prod
 CREATE OR ALTER PROCEDURE SalesReport
  @StartDate datetime
  , @EndDate datetime
@@ -22,18 +23,34 @@ BEGIN
 END
 
 GO
+USE Westwind
+GO
 EXEC SalesReport '2022/01/01', '2022/12/31', 1
 
 -- Zero dollar sale
-SELECT * FROM dbo.[Order Details] AS od WHERE od.OrderID = 16821
+-- get from above
+SELECT * FROM dbo.[Order Details] AS od WHERE od.OrderID IN (26482,
+26301,
+13073
+)
 
 -- Why a high discount?
 -- Nothing should be higher than .4
+SELECT * FROM dbo.[Order Details] AS od WHERE od.Discount > .8
 
--- Check others
+-- Check the others
 -- Find more problems
+SELECT o.*
+FROM dbo.[Order Details] AS od
+    INNER JOIN dbo.Orders o
+        ON o.OrderID = od.OrderID
+WHERE od.Discount > .8;
+
 
 -- Check in development
+use Westwind_1_Dev
+GO
+
 SELECT * FROM dbo.[Order Details] AS od WHERE od.Discount > .8
 -- no data
 
@@ -46,20 +63,28 @@ SELECT * FROM dbo.[Order Details] AS od WHERE od.Discount > .8
 
 -- No restrictions on Discount
 -- we had a malicious employee
--- We need better data in prod
+-- We need better data in dev
+
+
+-- Get updated dev environment from TDM/Data Virtualization (Cloning tech)
+-- Do this safely
+
+
+-- create clone
+-- check data
+-- Westwind
 /*
-17657
-17992
-17178
-16821
-16372
-*/
-/*
-UPDATE dbo.[Order Details]
- SET Discount = .6
-  WHERE orderid IN (
-17657,
-17992
-  )
+use westwind
+go
+SELECT * FROM dbo.[Order Details] AS od WHERE od.Discount > .8
+
+-- Vertical tab
+use westwind_1_Beca
+go
+SELECT * FROM dbo.[Order Details] AS od WHERE od.Discount > .8
 
 */
+
+
+-- We also need a constraint, but we need to talk to business people
+-- about how to deal with existing data and decide what to change.
