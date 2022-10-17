@@ -23,6 +23,9 @@ BEGIN
 END
 
 GO
+-- Ticket filed in production about bad order data
+-- DBA Investigate in production
+-- Devs SHOULD HAVE NO ACCESS to Production
 USE Westwind
 GO
 EXEC SalesReport '2022/01/01', '2022/12/31', 1
@@ -48,6 +51,7 @@ WHERE od.Discount > .8;
 
 
 -- Check in development
+-- Can a Dev replicate this problem
 use Westwind_1_Dev
 GO
 
@@ -77,11 +81,13 @@ SELECT * FROM dbo.[Order Details] AS od WHERE od.Discount > .8
 use westwind
 go
 SELECT * FROM dbo.[Order Details] AS od WHERE od.Discount > .8
+SELECT * from employees
 
 -- Vertical tab
 use westwind_1_Beca
 go
 SELECT * FROM dbo.[Order Details] AS od WHERE od.Discount > .8
+SELECT * from employees
 
 */
 
