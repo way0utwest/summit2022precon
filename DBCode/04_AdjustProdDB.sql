@@ -48,6 +48,13 @@ FROM dbo.[Order Details] od
         ON o.OrderID = od.OrderID
 WHERE o.EmployeeID = @empid;
 
+
+UPDATE dbo.Orders
+SET OrderDate = '3/15/2022'
+WHERE EmployeeID = @empid
+      AND DATEPART(y, OrderDate) < 2022;
+
+
 DECLARE mycurs CURSOR FOR
 SELECT OrderID
 FROM Orders
@@ -59,10 +66,12 @@ INTO @orderid;
 SET @discount = .8;
 WHILE @@FETCH_STATUS = 0
 BEGIN
-    SELECT @orderid;
+    SELECT @orderid, @discount;
+
     UPDATE dbo.[Order Details]
     SET Discount = @discount
     WHERE OrderID = @orderid;
+
     SET @discount = @discount + .2;
     FETCH NEXT FROM mycurs
     INTO @orderid;
