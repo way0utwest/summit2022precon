@@ -19,3 +19,6 @@ If not exists (select [name] from sys.databases where [name]='Westwind_1_Dev')
 GO
 USE [Westwind_1_Dev]
 GO
+ALTER DATABASE Westwind_1_Dev SET TRUSTWORTHY ON
+GO
+

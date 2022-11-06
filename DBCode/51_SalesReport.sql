@@ -43,9 +43,18 @@ EXEC SalesReport '2022/01/01', '2022/12/31', 1
 
 -- There is a zero dollar sale (among other issues
 -- get OrderIDs from above
-SELECT * FROM dbo.[Order Details] AS od WHERE od.OrderID IN (26482,
-26301,
-13073
+SELECT * FROM dbo.[Order Details] AS od WHERE od.OrderID IN (10465,
+10591,
+10921,
+10946,
+10546,
+10850,
+10270,
+10900,
+10469,
+10910,
+10374,
+10792
 )
 
 -- Why a high discount?

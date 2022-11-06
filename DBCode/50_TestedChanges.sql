@@ -29,8 +29,20 @@ END
 GO
 
 
+
+-- we can test this
+exec dbo.[Total Employee Sales By Country]
+GO
+
+
 -- we want to change it, but do we get the right results?
--- let's write a test. First, add tsqlt
+-- let's write a test. 
+-- **********************************************************
+-- **********************************************************
+-- First, add tsqlt from SQL Test
+-- **********************************************************
+-- **********************************************************
+
 -- next, we want to write a test that shows results
 EXEC tsqlt.NewTestClass @ClassName = N'xUnitTests' -- nvarchar(max)
 GO
@@ -130,6 +142,7 @@ GO
 EXEC tsqlt.run 'xUnitTests.[test Total Employee Sales By Country]'
 GO
 -- the test passes
+
 -- now, let's refactor code
 -- let's allow nulls and set the dates to the min and max
 -- let's also add a time to the enddate that is the end of the day

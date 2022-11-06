@@ -1,7 +1,7 @@
 ﻿/*
 Data Community Summit Precon
 
-01 - Setup production database
+03 - Setup production database
 
 Copyright 2022 Redgate Software
 */

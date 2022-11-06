@@ -11,11 +11,10 @@ Copyright 2022 Redgate Software
 -- new view, based on old one.
 CREATE VIEW dbo.OrderSubTotalsByOrder
 AS
-SELECT [Order Details].OrderID, 
-    SUM(CONVERT(money,("Order Details".UnitPrice*Quantity*(1-Discount)/100))*100) AS Subtotal
+SELECT od.OrderID, 
+    SUM(CONVERT(money,(od.UnitPrice*Quantity*(1-Discount)/100))*100) AS Subtotal
 FROM [Order Details] od
 GROUP BY od.OrderID
 GO
-
 
 -- save a migration script

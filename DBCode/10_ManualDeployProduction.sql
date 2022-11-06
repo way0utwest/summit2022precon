@@ -7,6 +7,8 @@ We need a new table
 
 Copyright 2022 Redgate Software
 */
+USE Westwind_1_Dev
+GO
 CREATE TABLE dbo.Summit2022 (
  Summit2022ID INT IDENTITY(1,1),
  QuoteBy VARCHAR(50),
@@ -39,8 +41,23 @@ GO
 
 -- deploy to prod
 -- somehow
+/* 
+-- email this to someone
+
+CREATE TABLE dbo.Summit2022 (
+ Summit2022ID INT IDENTITY(1,1),
+ QuoteBy VARCHAR(50),
+ Quote VARCHAR(500)
+)
+;
+GO
+
+*/
+
 
 -- add new data in prod
+/*
+-- Did this get emailed as well?
 INSERT dbo.Summit2022
 (
     QuoteBy,
@@ -51,3 +68,5 @@ VALUES
     'It is really wonderful to be back at a live Community Summit'  -- Quote - varchar(500)
     )
 GO
+
+*/

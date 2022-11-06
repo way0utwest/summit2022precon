@@ -9,6 +9,7 @@ Copyright 2022 Redgate Software
 */
 -- someone sent this to us
 -- let's make a procedure
+-- USE THE CLONED DB
 
 DECLARE @startdate DATE = '2022-01-01'
 , @enddate DATE = '2022-12-31'

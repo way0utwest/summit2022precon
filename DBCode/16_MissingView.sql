@@ -16,7 +16,7 @@ GO
 -- ij to countrycodes for name
 CREATE VIEW LatestEvents
 AS
-SELECT TOP 10
+SELECT TOP 10 
        *
 FROM dbo.Event e
 ORDER BY EventDate DESC;

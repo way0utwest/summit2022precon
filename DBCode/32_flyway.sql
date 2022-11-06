@@ -16,7 +16,7 @@ GO
 -- nfk
 /*
 ALTER TABLE dbo.$tablename$ 
-  ADD CONSTRAINT $tablename$_$parentname$_FK FOREIGN KEY dbo.$parentname$ ($pkcol$)
+  ADD CONSTRAINT $tablename$_$parentname$_FK FOREIGN KEY ($fkcol) REFERENCES dbo.$parentname$ ($pkcol$)
 $CURSOR$
 */
 
@@ -28,7 +28,7 @@ $CURSOR$
 
 
 -- should look like this:
---ALTER TABLE dbo.Customers ADD CONSTRAINT Customers_Event_FK FOREIGN KEY dbo.Event (EventID)
+-- ALTER TABLE dbo.Customers ADD CONSTRAINT Customers_Event_FK FOREIGN KEY (AttendedEvent) REFERENCES dbo.Event (EventID)
 --GO
 
 
