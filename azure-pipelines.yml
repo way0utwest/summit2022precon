@@ -1,0 +1,14 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- powershell: |
+   flyway -enterprise -url=jdbc:postgresql://localhost:5498/hamshackradio -user=postgres -password=dude1988 -configFiles="./conf/flyway.conf" migrate
