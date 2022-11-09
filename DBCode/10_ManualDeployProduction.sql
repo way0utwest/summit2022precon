@@ -3,7 +3,10 @@ Data Community Summit Precon
 
 10 - deploy to production
 
-We need a new table
+Demo 1: We need a new table in our system. Let's add this table and insert
+some data. We need to do this in dev and prod. The prod scripts are commented 
+out so you can simulate having someone else get this code and run it from 
+their machine.
 
 Copyright 2022 Redgate Software
 */

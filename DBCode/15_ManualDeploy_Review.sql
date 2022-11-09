@@ -2,8 +2,12 @@
 Data Community Summit Precon
 
 15 - deploy to production, manual, but a review. 
-   - email this file to someone
 
+We realized that we wanted the table with a primary key. However, we forgot.
+The commented code is the code we meant to write, but didn't. The code below that
+is the way to fix this development mistakes.
+
+We want to email this file to someone to deploy and fix our issue.
 
 Copyright 2022 Redgate Software
 */

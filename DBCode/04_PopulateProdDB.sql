@@ -3,6 +3,9 @@ Data Community Summit Precon
 
 02 - Setup production database
 
+This script creates most of the objects and adds data for the production database.
+The name corresponds to the name in the create script.
+
 Copyright 2022 Redgate Software
 */
 USE [Westwind]

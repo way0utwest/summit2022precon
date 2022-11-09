@@ -3,6 +3,11 @@ Data Community Summit Precon
 
 01 - Setup production database
 
+This script will create the development database that will be used for demos. This
+requires TRUSTWORTHY to enable the tSQLt testing framework.
+
+NOTE: This neesd to be SQL Server 2016 SP2+ to allow CREATE OR ALTER to work.
+
 Copyright 2022 Redgate Software
 */
 USE [master]

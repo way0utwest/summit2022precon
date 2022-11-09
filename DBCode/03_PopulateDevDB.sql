@@ -1,7 +1,10 @@
 ﻿/*
 Data Community Summit Precon
 
-03 - Setup production database
+03 - Setup development database
+
+This script creates the objects and adds data for the development database.
+The name corresponds to the name in the create script.
 
 Copyright 2022 Redgate Software
 */

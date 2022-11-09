@@ -2,7 +2,10 @@
 Data Community Summit Precon
 
 16 - forgot this code
-   - let's clean it up and make it better
+
+
+We forgot to deploy 12_ before, so let's clean it up and make it better. This script
+shows how we can make this code better with SQL Prompt.
 
 Copyright 2022 Redgate Software
 */

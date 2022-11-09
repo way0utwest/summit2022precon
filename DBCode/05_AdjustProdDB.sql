@@ -3,6 +3,17 @@ Data Community Summit Precon
 
 04 - Adjust production database to create an issue
 
+This script first requires you to run SQL Data Generator from Redgate.
+The generator file is in the root of this repository. Load this project
+file into SQL Data Generator and generate data. 
+
+NOTE: This points to the localhost and the Westwind database by default. If you have
+placed the production Westwind db on a different instance, please adjust the connection
+string.
+
+The rest of this script will adjust the existing orders to setup a problem in production
+that is exposed later in future scripts.
+
 Copyright 2022 Redgate Software
 */
 

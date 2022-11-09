@@ -1,7 +1,16 @@
 /*
 Data Community Summit Precon
 
-20 - better code
+20 - Better code
+
+We want to write better code, and use standards to ensure our knowledge is better 
+codified and easily transferred across staff changes. We will use snippets to do this.
+This code looks at how we'd like to ensrue we don't make the mistakes from the first
+deployment by creating a snippet.
+
+We use this to create a new table.
+
+We also should add this to a repo so that our team can get the snippets.
 
 Copyright 2022 Redgate Software
 */
