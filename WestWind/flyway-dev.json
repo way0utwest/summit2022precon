@@ -1,0 +1,14 @@
+{
+  "version": "2.0",
+  "name": "WestWind",
+  "id": "166ffb4c-3596-420d-8cfc-6e2e8eb510be",
+  "databaseType": "SqlServer",
+  "development": {
+    "scriptsFolder": "./schema-model"
+  },
+  "deployment": {
+    "flywayConfFiles": [
+      "./flyway.conf"
+    ]
+  }
+}
