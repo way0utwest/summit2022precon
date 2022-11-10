@@ -3,7 +3,7 @@ Data Community Summit Precon
 
 60 - More Data
 
-Let's add more data to deply
+Let's add more data to deploy
 
 Copyright 2022 Redgate Software
 */

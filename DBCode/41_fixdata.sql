@@ -16,9 +16,12 @@ select * from dbo.Summit2022
 GO
 -- Need a URL maybe to a tweet
 -- paste below
+-- Should we do this manually? Or a migration script?
 UPDATE dbo.Summit2022
  SET QuoteByURL = ''
  WHERE Summit2022ID = 
+
+GO
 
  
 
@@ -26,7 +29,7 @@ UPDATE dbo.Summit2022
 INSERT dbo.Summit2022
 (
     QuoteBy,
-    Quote
+    Quote2
 )
 VALUES
 (   '', -- QuoteBy - varchar(50)

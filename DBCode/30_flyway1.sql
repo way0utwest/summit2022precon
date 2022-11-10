@@ -12,10 +12,11 @@ CREATE PROCEDURE GetEvents
   @count INT
   AS
   BEGIN
-      IF @count IS NULL OR @count > 10
-	    SELECT @count = 10
-	SELECT TOP @count FROM dbo.LatestEvents
-	ORDER BY EventDate desc
+    IF @count IS NULL OR @count > 10
+      SELECT @count = 10
+	  SELECT TOP @count
+      FROM dbo.LatestEvents
+	    ORDER BY EventDate desc
   END
 GO
 

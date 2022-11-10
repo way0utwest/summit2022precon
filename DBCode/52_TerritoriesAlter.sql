@@ -4,6 +4,8 @@ Data Community Summit Precon
 51 - Evolving territories
 
 We want to start marking territories as active or not and adding dates
+More code that needs to be deployed and run through our process.
+
 
 Copyright 2022 Redgate Software
 */

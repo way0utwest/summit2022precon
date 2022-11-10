@@ -3,7 +3,8 @@ Data Community Summit Precon
 
 31 - Starting to use Flyway
 
-There also is a ticket to alter the order table
+There also is a ticket to alter the order table. We do this to add 
+an FK that we can use. Let's create a snippet
 
 Copyright 2022 Redgate Software
 */
