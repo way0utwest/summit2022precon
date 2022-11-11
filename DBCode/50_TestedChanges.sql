@@ -44,6 +44,10 @@ GO
 -- **********************************************************
 
 -- next, we want to write a test that shows results
+-- Test format:
+--    Assemble
+--    Act
+--    Assert
 EXEC tsqlt.NewTestClass @ClassName = N'xUnitTests' -- nvarchar(max)
 GO
 CREATE PROCEDURE xUnitTests.[test Total Employee Sales By Country]

@@ -42,18 +42,10 @@ GO
 EXEC SalesReport '2022/01/01', '2022/12/31', 1
 
 -- There is a zero dollar sale (among other issues
--- get OrderIDs from above
+-- get OrderIDs from above and replace these order IDs
 SELECT * FROM dbo.[Order Details] AS od WHERE od.OrderID IN (10465,
 10591,
 10921,
-10946,
-10546,
-10850,
-10270,
-10900,
-10469,
-10910,
-10374,
 10792
 )
 
@@ -81,8 +73,8 @@ SELECT * FROM dbo.[Order Details] AS od WHERE od.Discount > .8
 
 -- Check the constraint
 -- Westwind_1_Dev, Tables, Constraints
--- There is no CK_ constraint on discount
--- Someone deleted it.
+-- There is no CK_ constraint on dbo.[Order Details].discount
+-- Someone deleted it. There should be a CK_Discount < 0.4
 
 
 

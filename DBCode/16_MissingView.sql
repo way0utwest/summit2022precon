@@ -16,7 +16,7 @@ GO
 -- add OR ALTER
 -- select *
 -- schema
--- ij to countrycodes for name
+-- ij to countrycodes for name of country
 CREATE VIEW LatestEvents
 AS
 SELECT TOP 10 
