@@ -5,7 +5,7 @@
   <DefaultUser>dbo</DefaultUser>
   <DefaultFilegroup>PRIMARY</DefaultFilegroup>
   <DatabaseVersion>16</DatabaseVersion>
-  <ServerVersion>16.0.600.9</ServerVersion>
+  <ServerVersion>16.0.950.9</ServerVersion>
   <CompatibilityLevel>160</CompatibilityLevel>
   <EngineEdition>Enterprise</EngineEdition>
   <IsAzure>False</IsAzure>

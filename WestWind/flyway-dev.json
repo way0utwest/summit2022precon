@@ -9,6 +9,20 @@
   "deployment": {
     "flywayConfFiles": [
       "./flyway.conf"
+    ],
+    "targetDatabases": [
+      {
+        "connectionProvider": {
+          "url": "jdbc:sqlserver://localhost;databaseName=Westwind;encrypt=false",
+          "username": "sa",
+          "password": {
+            "data": "$cthulhu1988",
+            "secretType": "Inline"
+          },
+          "type": "UsernamePassword"
+        },
+        "schemas": []
+      }
     ]
   }
 }
