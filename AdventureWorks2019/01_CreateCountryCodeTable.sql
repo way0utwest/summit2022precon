@@ -33,16 +33,21 @@ INSERT INTO [Person].[CountryCode]
 )
 VALUES
 (   N'United States',      -- CountryName - nvarchar(200)
-    N'001',                -- CountryCodeNumber - nvarchar(100)
-    GETDATE()              -- ModifiedDate - datetime
-)
+    N'001',      -- CountryCodeNumber - nvarchar(100)
+    GETDATE() -- ModifiedDate - datetime
+    )
 
 
-
-
-ALTER TABLE [Person].[PersonPhone] ADD [CountryCodeID] INT NOT NULL DEFAULT 1
+ALTER TABLE [Person].[PersonPhone] ADD [CountryCodeID] INT NOT NULL DEFAULT 0
 GO
+DECLARE @CountryId INT;
+SET @CountryId =( SELECT [CountryCodeID] FROM [Person].[CountryCode] WHERE [CountryName] = 'United States' )
 
+
+UPDATE [Person].[PersonPhone] SET [CountryCodeID] = @CountryId WHERE [CountryCodeID] = 0
+
+ALTER TABLE [Person].[PersonPhone]
+ADD CONSTRAINT FK_PersonPhone_CountryCodeID FOREIGN KEY (CountryCodeID)
+    REFERENCES  [Person].[CountryCode](CountryCodeID);
 
 ROLLBACK
--- COMMIT
