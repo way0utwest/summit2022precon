@@ -1,0 +1,12 @@
+{
+  "id": "93c4717e-bb94-47fa-972f-92ff6262b801",
+  "prefix": "cl",
+  "description": "CREATE SQL Server login",
+  "body": "CREATE LOGIN [$username$]\nWITH PASSWORD = N'Someth!ngR#@lly$tr0ng' MUST_CHANGE,\n    DEFAULT_DATABASE = [Sandbox],\n    DEFAULT_LANGUAGE = [us_english],\n    CHECK_EXPIRATION = ON,\n    CHECK_POLICY = ON;\nGO\nUSE [Sandbox];\nGO\nCREATE USER [$username$] FOR LOGIN [$username$];\nGO\nUSE [Sandbox];\nGO\nALTER ROLE [AppTest] ADD MEMBER [$username$];\nGO",
+  "placeholders": [
+    {
+      "name": "username",
+      "defaultValue": ""
+    }
+  ]
+}

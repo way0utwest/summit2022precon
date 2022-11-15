@@ -1,0 +1,12 @@
+{
+  "id": "805381d9-e172-45f2-a58c-a4fe09ed0ae9",
+  "prefix": "bu",
+  "description": "Backup database copy only",
+  "body": "BACKUP DATABASE $databasename$ \n TO DISK = 'F:\\SQL Server\\Backup\\$databasename$.bak' \n WITH COPY_ONLY;\n",
+  "placeholders": [
+    {
+      "name": "databasename",
+      "defaultValue": ""
+    }
+  ]
+}

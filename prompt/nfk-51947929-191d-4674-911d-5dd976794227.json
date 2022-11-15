@@ -1,0 +1,20 @@
+{
+  "id": "51947929-191d-4674-911d-5dd976794227",
+  "prefix": "nfk",
+  "description": "New Foreign Key with our standard",
+  "body": "ALTER TABLE dbo.$tablename$ \r\n  ADD CONSTRAINT $tablename$_$parentname$_FK REFERENCES dbo.$parentname$ ($pkcol$)\r\n$CURSOR$\r\n",
+  "placeholders": [
+    {
+      "name": "tablename",
+      "defaultValue": null
+    },
+    {
+      "name": "parentname",
+      "defaultValue": null
+    },
+    {
+      "name": "pkcol",
+      "defaultValue": null
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "d375e03e-406d-4852-adff-73f6ab06e95f",
+  "prefix": "cp",
+  "description": "Create stored procedure",
+  "body": "CREATE PROCEDURE $procedure_name$\n  $CURSOR$\n/*\nDescription:\n\nChanges:\nDate       Who         Notes\n---------- ---         ---------------------------------------------------\n$DATE$  $USER$    $CURSOR$\n*/\nAS\nBEGIN\n$SELECTEDTEXT$\nRETURN\nEND\nGO\n/*\nGRANT EXECUTE ON $procedure_name$ TO $role_name$\ngo\n*/\n",
+  "placeholders": [
+    {
+      "name": "procedure_name",
+      "defaultValue": ""
+    },
+    {
+      "name": "role_name",
+      "defaultValue": ""
+    }
+  ]
+}

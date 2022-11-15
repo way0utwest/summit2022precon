@@ -17,11 +17,17 @@ GO
 -- select *
 -- schema
 -- ij to countrycodes for name of country
-CREATE VIEW LatestEvents
+CREATE OR ALTER VIEW dbo.LatestEvents
 AS
-SELECT TOP 10 
-       *
+SELECT TOP(10)
+ e.EventName,
+ e.EventDate,
+ e.EventLocation,
+ e.CountryCode        
 FROM dbo.Event e
+INNER JOIN dbo.CountryCodes c ON c.CountryCode = e.CountryCode 
 ORDER BY EventDate DESC;
 
 
+GO 
+SELECT * FROM dbo.LatestEvents

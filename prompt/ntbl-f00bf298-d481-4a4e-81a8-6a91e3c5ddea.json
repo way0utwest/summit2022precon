@@ -1,0 +1,16 @@
+{
+  "id": "f00bf298-d481-4a4e-81a8-6a91e3c5ddea",
+  "prefix": "ntbl",
+  "description": "",
+  "body": "CREATE TABLE dbo.$table_name$ (\r\n $table_name$ID INT IDENTITY(1,1) NOT NULL CONSTRAINT $table_name$PK PRIMARY KEY,\r\n $CURSOR$\r\n $ScaryDBA$\r\n)\r\nGO\r\nGRANT SELECT, INSERT, UPDATE, DELETE ON dbo.$table_name$ TO WebUsers\r\n",
+  "placeholders": [
+    {
+      "name": "table_name",
+      "defaultValue": "ScaryDBA"
+    },
+    {
+      "name": "ScaryDBA",
+      "defaultValue": null
+    }
+  ]
+}

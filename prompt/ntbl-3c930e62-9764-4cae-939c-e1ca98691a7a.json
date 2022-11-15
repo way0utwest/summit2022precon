@@ -1,0 +1,12 @@
+{
+  "id": "3c930e62-9764-4cae-939c-e1ca98691a7a",
+  "prefix": "ntbl",
+  "description": "New tables follow this standard",
+  "body": "CREATE TABLE dbo.$table_name$ (\r\n $table_name$ID INT IDENTITY(1,1) NOT NULL CONSTRAINT $table_name$PK PRIMARY KEY,\r\n $CURSOR$\r\n)\r\nGO\r\nGRANT SELECT, INSERT, UPDATE, DELETE ON dbo.$table_name$ TO WebUsers\r\n",
+  "placeholders": [
+    {
+      "name": "table_name",
+      "defaultValue": null
+    }
+  ]
+}

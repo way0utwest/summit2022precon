@@ -1,0 +1,6 @@
+{
+  "id": "520af8b2-2c58-4978-8f06-43b4b0877ea2",
+  "prefix": "demositcrr_newproc",
+  "description": "",
+  "body": "CREATE PROCEDURE [dbo].[CheckUserName]\n@username VARCHAR(200) = null\nAS\nIF EXISTS( SELECT userid FROM dbo.UserLogins\nWHERE Username = @username)\n RETURN -1\nelse\nRETURN 0\n"
+}

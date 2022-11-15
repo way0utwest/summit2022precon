@@ -1,0 +1,6 @@
+{
+  "id": "c23246f0-79c7-42de-a298-88dcafae445e",
+  "prefix": "demositcrr_newtable",
+  "description": "",
+  "body": "CREATE TABLE SQLintheCity\n( Virtual2016 INT)\n"
+}
