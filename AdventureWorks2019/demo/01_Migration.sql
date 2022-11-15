@@ -43,9 +43,6 @@ VALUES
 ALTER TABLE [Person].[PersonPhone] ADD [CountryCodeID] INT NOT NULL DEFAULT 1
 GO
 
--- TODO 
--- Create FK constraint on CountryCodeID
--- and add to [Person].[PersonPhone]
 
 ROLLBACK
 -- COMMIT
