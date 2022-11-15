@@ -1,0 +1,12 @@
+{
+  "id": "09fae5b6-ceef-4409-8a7d-15e039d5ea38",
+  "prefix": "cdb",
+  "description": "Create database",
+  "body": "CREATE DATABASE $database_name$\nON\nPRIMARY ( -- or use FILEGROUP filegroup_name\n  NAME = $database_name$_data,\n  FILENAME = '$database_name$.mdf'\n) --, and repeat as required\nLOG ON\n(\n  NAME = $database_name$_log,\n  FILENAME = '$database_name$.ldf'\n)\nPRIMARY ( \n  NAME = $database_name$_data,\n  FILENAME = '$database_name$.mdf'\n, SIZE = 51200KB , FILEGROWTH = 10240KB) \nLOG ON\n(\n  NAME = $database_name$_tlog,\n  FILENAME = '$database_name$.ldf'\n, SIZE = 25600KB , FILEGROWTH = 10240KB ) \nWITH\n  TRUSTWORTHY ON\nGO\nALTER DATABASE [MyNewdb] SET AUTO_CREATE_STATISTICS ON(INCREMENTAL = OFF)\nGO\nALTER DATABASE [MyNewdb] SET RECOVERY SIMPLE \nGO\nALTER DATABASE [MyNewdb] SET PAGE_VERIFY CHECKSUM  \nGO\n",
+  "placeholders": [
+    {
+      "name": "database_name",
+      "defaultValue": ""
+    }
+  ]
+}

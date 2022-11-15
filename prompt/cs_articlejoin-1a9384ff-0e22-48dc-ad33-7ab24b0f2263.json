@@ -1,0 +1,6 @@
+{
+  "id": "1a9384ff-0e22-48dc-ad33-7ab24b0f2263",
+  "prefix": "cs_articlejoin",
+  "description": "Demo code for article joins",
+  "body": "Articles as ars\ninner join Contacts\non ars.AuthorID = ContactsID"
+}

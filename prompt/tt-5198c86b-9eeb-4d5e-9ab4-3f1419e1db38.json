@@ -1,0 +1,6 @@
+{
+  "id": "5198c86b-9eeb-4d5e-9ab4-3f1419e1db38",
+  "prefix": "tt",
+  "description": "Tally Table for 100 numbers",
+  "body": "WITH myTally(n)\nAS\n(SELECT n = ROW_NUMBER() OVER (ORDER BY (SELECT null))\n FROM (VALUES (1), (2), (3), (4), (5), (6), (7), (8), (9), (10)) a(n)\n  CROSS JOIN (VALUES (1), (2), (3), (4), (5), (6), (7), (8), (9), (10)) b(n)\n)\nSELECT *\nFROM myTally"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "71cd4ab4-7df1-4e03-b347-e82137730cce",
+  "prefix": "test",
+  "description": "my test",
+  "body": "CREATE PROCEDURE $procedure_name$\n\n/*\nDescription:\n\nChanges:\nDate       Who Notes\n---------- --- ---------------------------------------------------\n*/\nAS\n\nGO\n\nGRANT EXECUTE ON $procedure_name$ TO $role_name$",
+  "placeholders": [
+    {
+      "name": "procedure_name",
+      "defaultValue": ""
+    },
+    {
+      "name": "role_name",
+      "defaultValue": ""
+    }
+  ]
+}

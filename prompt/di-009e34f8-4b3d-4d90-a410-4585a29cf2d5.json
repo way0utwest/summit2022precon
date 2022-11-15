@@ -1,0 +1,6 @@
+{
+  "id": "009e34f8-4b3d-4d90-a410-4585a29cf2d5",
+  "prefix": "di",
+  "description": "Drop index",
+  "body": "DROP INDEX "
+}

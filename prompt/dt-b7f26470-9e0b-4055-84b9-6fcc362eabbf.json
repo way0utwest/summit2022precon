@@ -1,0 +1,6 @@
+{
+  "id": "b7f26470-9e0b-4055-84b9-6fcc362eabbf",
+  "prefix": "dt",
+  "description": "Drop table",
+  "body": "DROP TABLE "
+}

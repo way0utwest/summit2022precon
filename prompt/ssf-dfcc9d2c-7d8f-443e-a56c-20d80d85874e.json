@@ -1,0 +1,6 @@
+{
+  "id": "dfcc9d2c-7d8f-443e-a56c-20d80d85874e",
+  "prefix": "ssf",
+  "description": "SELECT * FROM fragment",
+  "body": "SELECT top 10\n *\n FROM $CURSOR$\n "
+}

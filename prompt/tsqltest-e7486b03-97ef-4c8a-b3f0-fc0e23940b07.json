@@ -1,0 +1,16 @@
+{
+  "id": "e7486b03-97ef-4c8a-b3f0-fc0e23940b07",
+  "prefix": "tsqltest",
+  "description": "New tsqlt test outline",
+  "body": "EXEC tsqlt.NewTestClass @ClassName = N'$testschema$' -- nvarchar(max)\nGO\nCREATE PROCEDURE [$testschema$].[test $testprocedure$]\nAS\nBEGIN\n    --------------------------------------------\n\t----- Assemble\n\t--------------------------------------------\n    DECLARE @expected INT\n\t      , @actual INT\n\n    $CURSOR$\n    --------------------------------------------\n\t----- Act\n\t--------------------------------------------\n\n\n    --------------------------------------------\n\t----- Assert\n\t--------------------------------------------\n\tEXEC tsqlt.AssertEquals @Expected = @expected, \n\t                        @Actual = @actual,   \n\t                        @Message = N'Incorrect result'\n\t\nEND    \nGO\n\n",
+  "placeholders": [
+    {
+      "name": "testschema",
+      "defaultValue": ""
+    },
+    {
+      "name": "testprocedure",
+      "defaultValue": ""
+    }
+  ]
+}

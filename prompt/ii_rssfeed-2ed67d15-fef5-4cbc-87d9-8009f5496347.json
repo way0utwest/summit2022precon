@@ -1,0 +1,20 @@
+{
+  "id": "2ed67d15-fef5-4cbc-87d9-8009f5496347",
+  "prefix": "ii_rssfeed",
+  "description": "sdf",
+  "body": "INSERT INTO dbo.RSSFeeds\n(FeedName, Checked, FeedBurner, ModifiedDate)\nVALUES\n(   '$FeedName$'\n  , $checked$\n  , $Feedburner$\n  , SYSDATETIME()\n    )\n",
+  "placeholders": [
+    {
+      "name": "FeedName",
+      "defaultValue": ""
+    },
+    {
+      "name": "checked",
+      "defaultValue": "1"
+    },
+    {
+      "name": "Feedburner",
+      "defaultValue": "1"
+    }
+  ]
+}

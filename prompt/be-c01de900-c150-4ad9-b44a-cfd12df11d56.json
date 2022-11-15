@@ -1,0 +1,6 @@
+{
+  "id": "c01de900-c150-4ad9-b44a-cfd12df11d56",
+  "prefix": "be",
+  "description": "BEGIN...END block",
+  "body": "BEGIN\n    $SELECTEDTEXT$$CURSOR$\nEND"
+}
