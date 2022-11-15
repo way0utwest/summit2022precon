@@ -7,12 +7,12 @@ Version:4.5.1.4118-->
   <DataSource version="4" type="LiveDatabaseSource">
     <ServerName>(local)</ServerName>
     <DatabaseName>Westwind</DatabaseName>
-    <Username />
-    <SavePassword>False</SavePassword>
-    <Password />
+    <Username>sa</Username>
+    <SavePassword>True</SavePassword>
+    <Password encrypted="1">UP7SgxRGkebI5IIll4r1rg==</Password>
     <ScriptFolderLocation />
     <MigrationsFolderLocation />
-    <AuthenticationType>WindowsIntegrated</AuthenticationType>
+    <AuthenticationType>SqlPassword</AuthenticationType>
   </DataSource>
   <Tables type="List&lt;SDGTable&gt;" version="1">
     <value version="3" type="SDGTable">
@@ -5804,126 +5804,6 @@ Version:4.5.1.4118-->
           <NullProportion>0.01</NullProportion>
         </value>
       </ForeignKeyProperties>
-    </value>
-    <value version="3" type="SDGTable">
-      <TableType>Generated</TableType>
-      <PopulationDetails version="2" type="PopulationDetails">
-        <PopulationType>RowCount</PopulationType>
-        <RowCount>1000</RowCount>
-        <ProportionTableExists>False</ProportionTableExists>
-        <Proportion>0</Proportion>
-        <TimeToPopulate>0</TimeToPopulate>
-      </PopulationDetails>
-      <InvalidRowBehaviour>SkipRow</InvalidRowBehaviour>
-      <Included>True</Included>
-      <Append>False</Append>
-      <Name>Summit2022</Name>
-      <Schema>dbo</Schema>
-      <IsTemporal>False</IsTemporal>
-      <IdentityInsert>True</IdentityInsert>
-      <Fields type="List&lt;SDGField&gt;" version="1">
-        <value version="1" type="SDGField">
-          <Name>Summit2022ID</Name>
-          <FieldType>Default</FieldType>
-          <PrimaryKey>True</PrimaryKey>
-          <ForeignKey>False</ForeignKey>
-          <Unique>True</Unique>
-          <AllowsNulls>False</AllowsNulls>
-          <SqlType>Integer32</SqlType>
-          <Precision>10</Precision>
-          <Scale>0</Scale>
-          <DefinedSize>4</DefinedSize>
-        </value>
-        <value version="1" type="SDGField">
-          <Name>QuoteBy</Name>
-          <FieldType>Generated</FieldType>
-          <PrimaryKey>False</PrimaryKey>
-          <ForeignKey>False</ForeignKey>
-          <Unique>False</Unique>
-          <AllowsNulls>True</AllowsNulls>
-          <SqlType>Varchar</SqlType>
-          <Precision>0</Precision>
-          <Scale>0</Scale>
-          <DefinedSize>50</DefinedSize>
-          <Generator version="1" type="GeneratorDetails">
-            <GeneratorTypeName>RedGate.SQLDataGenerator.ExpressionGenerators.Regexp.RegexpGenerator</GeneratorTypeName>
-            <DisplayName>Regex Generator</DisplayName>
-            <Description>Generates data from a Regular Expression</Description>
-            <CategoryName>Generic</CategoryName>
-            <GeneratorProperties type="Dictionary&lt;string, object&gt;" version="1">
-              <element>
-                <key type="string">Expression</key>
-                <value type="string">[A-Z0-9]*</value>
-              </element>
-              <element>
-                <key type="string">UseSequence</key>
-                <value type="string">False</value>
-              </element>
-              <element>
-                <key type="string">NullsAllowed</key>
-                <value type="string">True</value>
-              </element>
-              <element>
-                <key type="string">NullProportion</key>
-                <value type="string">0.01</value>
-              </element>
-              <element>
-                <key type="string">Seed</key>
-                <value type="string">16385</value>
-              </element>
-              <element>
-                <key type="string">Unique</key>
-                <value type="string">False</value>
-              </element>
-            </GeneratorProperties>
-          </Generator>
-        </value>
-        <value version="1" type="SDGField">
-          <Name>Quote</Name>
-          <FieldType>Generated</FieldType>
-          <PrimaryKey>False</PrimaryKey>
-          <ForeignKey>False</ForeignKey>
-          <Unique>False</Unique>
-          <AllowsNulls>True</AllowsNulls>
-          <SqlType>Varchar</SqlType>
-          <Precision>0</Precision>
-          <Scale>0</Scale>
-          <DefinedSize>500</DefinedSize>
-          <Generator version="1" type="GeneratorDetails">
-            <GeneratorTypeName>RedGate.SQLDataGenerator.ExpressionGenerators.Regexp.RegexpGenerator</GeneratorTypeName>
-            <DisplayName>Regex Generator</DisplayName>
-            <Description>Generates data from a Regular Expression</Description>
-            <CategoryName>Generic</CategoryName>
-            <GeneratorProperties type="Dictionary&lt;string, object&gt;" version="1">
-              <element>
-                <key type="string">Expression</key>
-                <value type="string">[A-Z0-9]*</value>
-              </element>
-              <element>
-                <key type="string">UseSequence</key>
-                <value type="string">False</value>
-              </element>
-              <element>
-                <key type="string">NullsAllowed</key>
-                <value type="string">True</value>
-              </element>
-              <element>
-                <key type="string">NullProportion</key>
-                <value type="string">0.01</value>
-              </element>
-              <element>
-                <key type="string">Seed</key>
-                <value type="string">16386</value>
-              </element>
-              <element>
-                <key type="string">Unique</key>
-                <value type="string">False</value>
-              </element>
-            </GeneratorProperties>
-          </Generator>
-        </value>
-      </Fields>
-      <ForeignKeyProperties type="List&lt;ForeignKeyProperty&gt;" version="1" />
     </value>
   </Tables>
   <ProjectOptions version="2" type="ProjectOptions">
