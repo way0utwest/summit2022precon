@@ -16,3 +16,8 @@ SELECT TOP 10 *
  ORDER BY EventDate DESC
  
 
+SELECT top 10
+ *
+ FROM latestevents
+
+ 
