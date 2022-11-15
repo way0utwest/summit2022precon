@@ -1,0 +1,2 @@
+ALTER TABLE dbo.Summit2022
+ ADD QuoteByURL VARCHAR(200)
